@@ -1,6 +1,6 @@
 const SideBar = () => {
   return (
-    <div className="sidebar">
+    <div className="flex-[3] h-screen border-r">
       <p>SideBar</p>
     </div>
   );

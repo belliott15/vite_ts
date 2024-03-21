@@ -2,15 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/* base layout css */
-.base {
-  display: grid;
-  grid-template-columns: 240px 1fr 240px;
-}
 
-.sidebar {
-  background-color: rgb(216, 210, 210);
-  height: 95vh;
-  padding: 4px;
-  border-radius: 10px;
-}
