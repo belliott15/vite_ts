@@ -6,7 +6,6 @@ type SingleFolderFileCardProps = {
 };
 
 const SingleFolderFileCard = ({
-  id,
   name,
   type,
   url,
