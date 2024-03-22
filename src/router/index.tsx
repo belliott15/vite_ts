@@ -1,6 +1,7 @@
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 import Homepage from "../pages/Homepage";
 import BaseComponent from "../components/BaseComponent";
+import SingleFolder from "../pages/SingleFolder";
 
 const routes = [
   {
@@ -10,6 +11,10 @@ const routes = [
       {
         path: "",
         element: <Homepage />,
+      },
+      {
+        path: "/folder/:folderId",
+        element: <SingleFolder />,
       },
     ],
   },
