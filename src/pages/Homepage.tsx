@@ -2,8 +2,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HomeFolderCard from "../components/HomeFolderCard";
 import data from "../../data.ts";
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
+import { useState } from "react";
+import AddFolder from "../components/AddFolder.tsx";
 
 const Homepage = () => {
+  const [modal, setModal] = useState(false);
+
+  const handleModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <div>
       <div className="flex w-full justify-between p-4">
@@ -25,9 +33,7 @@ const Homepage = () => {
       </div>
       <div className="flex justify-end w-full p-4">
         <button
-          onClick={() => {
-            console.log("add folder");
-          }}
+          onClick={handleModal}
           className="bg-emerald-100 rounded-full h-10 w-10 flex justify-center items-center"
         >
           <FontAwesomeIcon
@@ -37,7 +43,9 @@ const Homepage = () => {
           />
         </button>
       </div>
-      {}
+      <AddFolder closeModal={handleModal} visible={modal}>
+        Add new folder?
+      </AddFolder>
     </div>
   );
 };

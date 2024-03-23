@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 type HomeFolderProps = {
-  id: number;
+  // id: number;
   name: string;
   size: number;
-  dateCreated: string;
+  // dateCreated: string;
   dateModified: string;
 };
 
