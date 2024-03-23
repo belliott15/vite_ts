@@ -11,8 +11,8 @@ interface ModalProps {
 const AddFolder = ({ children, visible = true, closeModal }: ModalProps) => {
   const [title, setTitle] = useState();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (e: string) => {
+    console.log(e.target.value);
     setTitle(e.target.value);
     closeModal();
   };
